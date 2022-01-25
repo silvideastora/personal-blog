@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
-body {
-    font-family: 'Poppins', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 62.5%;
 }
 .home-body{
     position: fixed;
@@ -21,15 +28,16 @@ a {
 }
 header {
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: grid;
     grid-template-rows: 1fr 1fr ;
 }
 header .header-icons-container {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     display: grid;
     background-color: #7740d4;
+    position: static;
 }
 header .header-icons-container .icons {
     width: 300px;
@@ -47,16 +55,14 @@ header .icons span {
 nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #f7f7f7
+    background-color: #f7f7f7;
 
 }
 nav .nav-logo-container {
     margin-left: 50px;
-    ;
 }
 nav .nav-logo-container img {
-    width: 220px;
-    margin-top: 0px;
+    width: 200px;
     align-self: flex-start;
 }
 nav .profile-link {
@@ -68,7 +74,7 @@ nav .profile-link {
 nav .profile-link a {
     color: #250a29;
     border-bottom: 1px solid #250a29;
-
+    font-size: 1.6rem;
 }
 
 .home-main {
@@ -89,20 +95,28 @@ nav .profile-link a {
     margin-top: 100px;
     align-items: center;
 }
+
 .home-main-title {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 700px;
     letter-spacing: 10px;
-    color: pink;
     text-align: center;
+    background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, pink);    
+    background-clip: text;
+    animation: color 3s linear infinite;
+    background-size: 500%;
+    color: white;
 } 
+     
 .home-main-button {
-    width: 300px;
+    width: 30%;
     height: 50px;
+    margin-left:auto ;
+    margin-right: auto;
     background-color: #7740d4;
     display: grid;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 1rem;
     
 }
 .home-main-button a {
@@ -166,14 +180,16 @@ nav .profile-link a {
     width: 100%;
 }
 footer {
+    display: flex;
     width: 100%;
-    height: 60px;
+    height: 100%;
     background-color: #7740d4;
-    border-top: 50px solid pink;
+    border-top: 5rem solid pink;
     text-align: center;
 }
 footer p {
     color: black;
+    font-size: 1.6rem;
 }
 .blogpost-img-container {
     padding: 27px 50px 40px;
@@ -194,10 +210,10 @@ footer p {
 
 .contact-main-container {
     width: 100%;
-    height: 80px;
+    height: 1rem;
     background-color: pink;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 1rem;
     position: sticky;
 }
 .contact-main-container div {
@@ -207,42 +223,70 @@ footer p {
 }
 .contact-main-container div a {
     border-bottom: 1px solid black;
-    padding-bottom: 5px;
+    padding-bottom: 1rem;
     margin-left: 10px;
 }
 .contact-main-container .contact-left, .contact-right {
     text-align: initial;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .contact-main-container img {
     width: 100px;
+    margin-top: auto;
 }
 
 .profile-main-container {
-    padding: 80px 40px;
+    display: flex;
+    padding: 50px 50px;
     background-color: pink;
-    margin-bottom: 40px;
+    margin: 50px 0 50px;
+    font-size: 1.6rem;
 }
 
 .profile-main-container img {
-    width: 320px;
+    width: 100%;
     margin-right: 30px;
     border-radius: 50%;
 }
 .profile-main-container .profile-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+.profile-main-container .profile-container div:nth-child(2){
+    padding: 3rem;
 }
 .profile-main-projects {
     padding: 0 50px 40px;
     gap: 16px;
 }
+.projects-main-container article:nth-child(2){
+    padding: 3rem;
+}
 .profile-main-projects h3 {
     border-bottom: 1px solid black;
     padding-bottom: 35px;
     text-align: center;
+    font-size: 1.6rem;
 }
 .projects-main-container  {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.6rem;
+}
+.projects-main-container img {
+    width: 90%;
+}
+.project-container h4 {
+    color: #7740d4;
+    font-size: 1.6rem;
+}
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
 }
